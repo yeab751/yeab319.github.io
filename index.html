@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySite - Modern and Professional Web Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./updated.css">
+</head>
+  <style>
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff4c60; 
+    --primary-color-hover: #d40f37;
+    --dark-bg: #010205; /* Header & Footer */
+    --light-bg: #fdf2f0; /* Testimonials section */
+    --text-on-dark: #fff;
+    --text-main: #333;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --font-family-main: 'Poppins', sans-serif;
+    --border-radius-main: 10px;
+    --border-radius-btn: 5px;
+}
+
+html {
+    font-family: var(--font-family-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Reusable Container */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Button Classes */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-main);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius-btn);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-on-dark);
+    border: 1px solid var(--text-on-dark);
+    border-radius: var(--border-radius-btn);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-on-dark);
+    color: var(--dark-bg);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+
+/* Header */
+.main-header {
+    background-color: var(--dark-bg);
+    color: var(--text-on-dark);
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-right: auto; /* Push others to the right */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-right: 30px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url(./img/heros-section_Image_b81rcjb81rcjb81r\ \(1\).png) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+/* Services (Cards) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-item {
+    background: white;
+    border-radius: var(--border-radius-main);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+.card-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-item h3 {
+    font-size: 1.6rem;
+    padding: 20px 20px 5px 20px;
+}
+
+.card-item p {
+    padding: 0 20px 20px 20px;
+    color: #666;
+}
+
+/* Testimonials */
+.testimonials {
+    background: var(--light-bg);
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-item {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--card-shadow);
+}
+
+.testimonial-item img{
+    border-radius: 100%;
+    margin: 0% auto;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.testimonial-item h4 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.testimonial-item span {
+    font-size: 0.9rem;
+    color: #888;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-bg);
+    color: var(--text-on-dark);
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* media query*/
+
+@media (max-width: 992px) {
+    .hero-content h1 { 
+        font-size: 3rem; 
+    }
+    .hero-content p { 
+        font-size: 1.1rem; 
+    }
+    .card-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header .container { 
+        flex-direction: column; 
+        gap: 15px; }
+    .logo { 
+        margin-right: 0;
+     }
+    .nav-links { 
+        flex-wrap: wrap;
+        justify-content: center; 
+        margin-right: 0;
+    }
+    
+    .card-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+  </style>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">MySite</a>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Sign In</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building Modern & Beautiful Websites</h1>
+            <p>We craft clean, responsive, and innovative web solutions to help your business stand out in the digital world.</p>
+            <a href="#" class="btn btn-large btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <section class="services section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="card-grid">
+
+                <div class="card-item">
+                    <img src="./img/ux_ui-designer.png" alt="UI/UX Design Service">
+                    <h3>UI/UX Design</h3>
+                    <p>We design intuitive interfaces focused on user experience and conversion.</p>
+                </div>
+
+                <div class="card-item">
+                    <img src="./img/responsive-web.webp" alt="Responsive Web Development Service">
+                    <h3>Responsive Layouts</h3>
+                    <p>Your site will look flawless on every device, from mobile to ultra-wide screens.</p>
+                </div>
+
+                <div class="card-item">
+                    <img src="./img/customdevelopment_Image_jldha6jldha6jldh.png" alt="Custom Coding Service">
+                    <h3>Custom Development</h3>
+                    <p>Tailored coding solutions for complex functionalities and unique requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-grid">
+
+                <div class="testimonial-item">
+                    <img src="./img/1-artoon-avatar-profile-illustration-free-vector.jpg" alt="" width="70px" height="70px">
+                    <p>"This service completely changed our business. Highly recommended!"</p>
+                    <h4>John Doe</h4>
+                    <span>CEO, Tech Solutions</span>
+                </div>
+
+                <div class="testimonial-item">
+                    <img src="./img/2-bearded-man-illustration-in-flat-cartoon-style-free-vector.jpg" alt="" width="70px" height="70px">
+                    <p>"Amazing experience and great support from the team."</p>
+                    <h4>Sarah Smith</h4>
+                    <span>Marketing Manager</span>
+                </div>
+
+                <div class="testimonial-item">
+                    <img src="./img/3-poster-etc-flat-illustration-vector.jpg" alt="" width="70px" height="70px">
+                    <p>"Professional and reliable. I will definitely use them again."</p>
+                    <h4>Michael Lee</h4>
+                    <span>Entrepreneur</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <p> &copy; 2026 My Website. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
